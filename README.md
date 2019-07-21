@@ -13,3 +13,8 @@ This project uses XGBoost Classifier to predict their clients' repayment abiliti
 Since the size of the dataset is large:
 * I built the "sample_size" parameter under "prepare_data" function, so that we can run the model with smaller dataset.
 * I used GPU to run it faster ('clf__tree_method': ['gpu_hist'],).
+
+Here is the result of the model using randomly selected 50,000 records (40,000 train data set, 10,000 test data set):
+Accuracy is 0.90. Recall of "1" is a bit weak at 0.31; however, very strong recall of "0" at 0.93.
+
+![](result_xgb.png)
